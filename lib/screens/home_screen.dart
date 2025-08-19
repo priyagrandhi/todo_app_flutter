@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start, // keep content at top
+          mainAxisAlignment: MainAxisAlignment.start, 
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 30),
@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       filled: true,
                       fillColor: Colors.white,
 
-                      // ✅ Remove purple border
+                      
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
                         borderSide: const BorderSide(color: Colors.blueGrey),
@@ -112,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 20),
 
-            // Task list aligned center with fixed width
+            
             Expanded(
               child: Center(
                 child: SizedBox(
@@ -147,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: ListTile(
                                 leading: Checkbox(
                                   value: task['completed'],
-                                  activeColor: Colors.blueGrey, // ✅ Match theme
+                                  activeColor: Colors.blueGrey, 
                                   onChanged: (value) =>
                                       _toggleTask(index, value),
                                 ),
