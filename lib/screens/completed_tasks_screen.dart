@@ -19,7 +19,7 @@ class CompletedTasksScreen extends StatelessWidget {
       ),
       body: Center(
         child: SizedBox(
-          width: 350, // reduced width
+          width: 350, 
           child: ValueListenableBuilder(
             valueListenable: tasksBox.listenable(),
             builder: (context, box, _) {
@@ -34,7 +34,7 @@ class CompletedTasksScreen extends StatelessWidget {
                 return const Center(child: Text('No completed tasks'));
               }
               return ListView.builder(
-                padding: const EdgeInsets.only(top: 20), // ✅ Added top padding
+                padding: const EdgeInsets.only(top: 20), //  Added top padding
                 itemCount: completedTasks.length,
                 itemBuilder: (context, index) {
                   var task = completedTasks[index];
@@ -49,9 +49,9 @@ class CompletedTasksScreen extends StatelessWidget {
                             {'title': task['title'], 'completed': value},
                           );
                         },
-                        activeColor: Colors.blueGrey, // ✅ checkbox color
+                        activeColor: Colors.blueGrey, // checkbox color
                         checkColor: Colors.white,     // tick color
-                        shape: RoundedRectangleBorder( // ✅ square box
+                        shape: RoundedRectangleBorder( // square box
                           borderRadius: BorderRadius.circular(2),
                         ),
                       ),
