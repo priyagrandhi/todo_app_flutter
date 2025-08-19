@@ -18,7 +18,7 @@ class TaskTile extends StatelessWidget {
       child: ListTile(
         leading: Checkbox(
           value: isCompleted,
-          onChanged: onChanged, // ✅ uses global theme colors
+          onChanged: onChanged, 
         ),
         title: Text(
           taskTitle,
