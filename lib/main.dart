@@ -6,7 +6,7 @@ import '../screens/completed_tasks_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  // ignore: unused_local_variable
+
   var box = await Hive.openBox('tasksBox');
   runApp(const MyApp());
 }
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'To-Do List',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: true, // enables latest Material 3 widgets
+        useMaterial3: true, 
         scaffoldBackgroundColor: Colors.blueGrey[50],
 
         appBarTheme: const AppBarTheme(
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         ),
 
         checkboxTheme: CheckboxThemeData(
-          checkColor: WidgetStateProperty.all(Colors.white), // tick color
+          checkColor: WidgetStateProperty.all(Colors.white), 
           fillColor: WidgetStateProperty.resolveWith<Color>(
             (states) {
               if (states.contains(WidgetState.selected)) {
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
               return Colors.white; // ⬜ unchecked
             },
           ),
-          overlayColor: WidgetStateProperty.all(Colors.transparent), // removes purple ripple
+          overlayColor: WidgetStateProperty.all(Colors.transparent), 
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(0),
           ),
